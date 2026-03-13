@@ -119,13 +119,11 @@
     align-items: center;
   }
 
-  .gogglebox-footer {
-    margin: 3rem 0 2rem 0;
-  }
 
   .copyright-text {
     display: flex;
     justify-content: center;
+    padding: 3rem 0 2rem 0 !important;
   }
 
   main {
