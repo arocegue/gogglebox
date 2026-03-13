@@ -1,0 +1,235 @@
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-size:12px;
+    background-color: #2E083D
+  }
+
+  .schedule-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .schedule-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      to  right,
+      #FF5C00,
+      #CB2DF4
+    ); 
+    border-radius: 6px;
+  }
+
+  .schedule-scroll::-webkit-scrollbar-track {
+    background: #000;
+    @media screen and (max-width: 580px) {
+      margin-right: 16px;
+      
+    }
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    .schedule-scroll {
+      scrollbar-width: thin; /* Firefox only supports 'auto', 'thin', or 'none' */
+      scrollbar-color: #FF5C00 #000;
+    }
+  }
+
+  .schedule-scroll {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+
+  #login-button{
+    background-color: inherit;
+    border:none;
+    color: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  #gogglebox-logo img {
+  width: 70%;
+  }
+
+  h2{
+    font-size: 24px;
+  }
+
+  h2, p {
+    margin: inherit;
+  }
+  .card-layout,.tomorrows-schedule {
+    margin-top: 2rem;
+  }
+
+  .tomorrows-schedule{
+    padding-left: 1rem;
+  }
+
+  .hero-banner,
+  .card-layout,
+  nav, 
+  .copyright-text {
+    max-width: 580px;
+    padding: 0 1rem;
+  }
+
+  .hero-banner{
+    padding: 0 0;
+  }
+
+  .cards {
+    display: flex;
+    padding-left: 0;
+    list-style-type: none;
+    margin-bottom: 1rem;
+  }
+
+  .cards, .now-playing-flexbox {
+      margin-top: 1rem;
+  }
+
+  .card {
+    display: flex;
+    scroll-snap-align: start;
+    flex: 0 0 100%;
+    flex-direction: column;
+    flex-basis: calc(60% - 10px);
+  }
+ 
+  .card:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .gogglebox-header{
+    background-color: #000;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .gogglebox-footer {
+    margin: 3rem 0 2rem 0;
+  }
+
+  .copyright-text {
+    display: flex;
+    justify-content: center;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  .now-playing-flexbox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-show img, .stack-show img, .hero-banner img, .card img { 
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  @media screen and (max-width: 580px) {
+    .stack-show img {
+      margin-top: 1rem;
+    }
+  
+  }
+
+  @media screen and (min-width: 580px) {
+    body {
+      font-size:16px;
+    }
+    .cards {
+      margin-bottom: 2rem;
+    }
+    #gogglebox-logo img {
+      width: 100%;
+    }
+    #gogglebox-logo, .login {
+      margin: 0 2rem;
+    }
+
+    .now-playing-flexbox {
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    .main-show {
+      display: flex;
+      flex-basis: 33.33%;
+    }
+
+    .stack-show {
+      display: flex;
+      flex-basis: 66.67%;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+  
+  .hero-banner,
+  .card-layout,
+  .tomorrows-schedule, 
+  nav, 
+  .copyright-text {
+    max-width: 1620px;
+    padding: 0 2rem;
+    margin: 0 auto;
+  }
+
+  .card-layout,.tomorrows-schedule {
+    margin-top: 2rem;
+  }
+  
+  .hero-banner {
+    margin-top: 3rem;
+  }
+
+}
+
+@media screen and (min-width: 580px){
+  .card {
+    flex-basis: calc(calc(100% / 3) - 12px);
+  }
+ 
+
+  .card:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .card {
+    flex-basis: calc(calc(100% / 4) - 15px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .card {
+    flex-basis: calc(17% - 30px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+
