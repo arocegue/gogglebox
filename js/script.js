@@ -15,21 +15,6 @@
     let countryCode = "US";
     let tomorrowDate = formatDate(new Date());
     let tvmazeAPI = `https://api.tvmaze.com/schedule`;
-    const element = $('#tomorrow-schedule');
-    const breakpoint = window.matchMedia("(max-width: 580px)");
-
-    function handleBreakpoint(mediaQuery) {
-      if (mediaQuery.matches){
-        element.removeClass(".container");
-      } else {
-        element.addClass(".container");
-      }
-    }
-
-    handleBreakpoint(breakpoint);
-
-    breakpoint.addEventListener('change', handleBreakpoint);
-
 
     $.ajax({
       url: tvmazeAPI,
