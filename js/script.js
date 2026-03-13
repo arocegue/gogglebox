@@ -14,9 +14,7 @@
   $(function () {
     let countryCode = "US";
     let tomorrowDate = formatDate(new Date());
-    //URL: https://api.tvmaze.com/schedule?
-    //Test error with any string 
-    let tvmazeAPI = `https://api.tvmaze.com/schedule?`;
+    let tvmazeAPI = `https://api.tvmaze.com/schedule`;
     $.ajax({
       url: tvmazeAPI,
       data: {
@@ -27,12 +25,7 @@
       dataType: "json",
       success: function (result, status, xhr) {
         let limit = 24;
-        console.log("Result: ", result);
-        // $(".schedule-scroll").show()
         $.each(result, function(index, item){
-          console.log("Index: "+ index + 
-          " Item: " + item);
-
           //Check if we have image and anchor URL otherwise skip to the next show
           let anchorURL = item?.show?.url;
           let imageSrc = item?.show?.image?.medium;
@@ -49,9 +42,6 @@
             return false;
           }
         });
-
-        console.log("Status: ", status);
-        console.log("xhr: ", xhr);
       },
       error: function(xhr, status, error){
         $(".schedule-scroll").append("<p>We are unable to load Tomorrow's Schedule for you at this time.</p><p> Please try again later.</p>")
