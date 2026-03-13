@@ -1,12 +1,22 @@
   body {
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     font-size:12px;
     background-color: #2E083D
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .column {
+    flex-direction: column;
+  }
+
+  .row {
+    flex-direction: row;
   }
 
   .schedule-scroll::-webkit-scrollbar {
@@ -52,16 +62,17 @@
   }
 
   #gogglebox-logo img {
-  width: 70%;
+    width: 70%;
   }
 
-  h2{
+  h2 {
     font-size: 24px;
   }
 
   h2, p {
     margin: inherit;
   }
+
   .card-layout,.tomorrows-schedule {
     margin-top: 2rem;
   }
@@ -70,10 +81,7 @@
     padding-left: 1rem;
   }
 
-  .hero-banner,
-  .card-layout,
-  nav, 
-  .copyright-text {
+  .container {
     max-width: 580px;
     padding: 0 1rem;
   }
@@ -83,21 +91,18 @@
   }
 
   .cards {
-    display: flex;
     padding-left: 0;
     list-style-type: none;
     margin-bottom: 1rem;
   }
 
-  .cards, .now-playing-flexbox {
-      margin-top: 1rem;
+  .cards, .now-playing {
+    margin-top: 1rem;
   }
 
   .card {
-    display: flex;
     scroll-snap-align: start;
     flex: 0 0 100%;
-    flex-direction: column;
     flex-basis: calc(60% - 10px);
   }
  
@@ -114,14 +119,11 @@
   }
 
   nav {
-    display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-
   .copyright-text {
-    display: flex;
     justify-content: center;
     padding: 3rem 0 2rem 0 !important;
   }
@@ -130,8 +132,7 @@
     flex: 1;
   }
 
-  .now-playing-flexbox {
-    display: flex;
+  .now-playing {
     flex-direction: column;
   }
 
@@ -161,7 +162,7 @@
       margin: 0 2rem;
     }
 
-    .now-playing-flexbox {
+    .now-playing {
       flex-direction: row;
       gap: 1rem;
     }
@@ -179,11 +180,7 @@
     }
     
   
-  .hero-banner,
-  .card-layout,
-  .tomorrows-schedule, 
-  nav, 
-  .copyright-text {
+  .container {
     max-width: 1620px;
     padding: 0 2rem;
     margin: 0 auto;

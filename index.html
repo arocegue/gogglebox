@@ -15,7 +15,7 @@
 </head>
 <body>
   <header class="gogglebox-header">
-    <nav>
+    <nav class = "container flex">
       <div id="gogglebox-logo">
         <a href="index.html">
           <img src="assets/images/2308_gogglebox_logo.png" alt="gogglebox logo">
@@ -34,17 +34,17 @@
     </nav>
   </header>
   
-  <main class = "content-container">
-    <section class="hero-banner">
+  <main>
+    <section class="hero-banner container">
       <picture class="hero-image">
         <source srcset="assets\images\2308_desktop_hero.jpg" media="(min-width: 580px)" alt="Desktop Hero Image"/>
         <img src="assets/images/2308_mobile_hero.jpg" alt="Mobile Hero Image">
       </picture>
     </section>
     
-    <section class="card-layout">
+    <section class="card-layout container">
       <h2>Now Playing</h2>
-      <div class="now-playing-flexbox">
+      <div class="now-playing flex">
         <div class="main-show">
           <img src="assets/images/2308_01_now_playing.jpg" alt="TV Maze Show">
 
@@ -57,10 +57,10 @@
       </div>
     </section>
     
-    <section class="tomorrows-schedule">
+    <section id ="tomorrows-schedule" class="tomorrows-schedule container">
       <h2>Tomorrow's Schedule</h2>
       <div class="schedule-scroll">
-        <ul class = "cards">
+        <ul class = "cards flex">
         </ul>
       </div>
     </section>
@@ -68,7 +68,7 @@
   </main>
     
   <footer class="gogglebox-footer">
-    <div class = "copyright-text">
+    <div class = "copyright-text container flex">
       <p>&copy; Gogglebox 2026 All Rights Reserved.</p>
     </div>
   </footer>

@@ -15,6 +15,22 @@
     let countryCode = "US";
     let tomorrowDate = formatDate(new Date());
     let tvmazeAPI = `https://api.tvmaze.com/schedule`;
+    const element = $('#tomorrow-schedule');
+    const breakpoint = window.matchMedia("(max-width: 580px)");
+
+    function handleBreakpoint(mediaQuery) {
+      if (mediaQuery.matches){
+        element.removeClass(".container");
+      } else {
+        element.addClass(".container");
+      }
+    }
+
+    handleBreakpoint(breakpoint);
+
+    breakpoint.addEventListener('change', handleBreakpoint);
+
+
     $.ajax({
       url: tvmazeAPI,
       data: {
@@ -30,7 +46,7 @@
           let anchorURL = item?.show?.url;
           let imageSrc = item?.show?.image?.medium;
           if(imageSrc){
-            $(`<li class="card"><a href="${anchorURL}" target="_blank" rel="noopener noreferrer" ><img src="${imageSrc}" alt="TV maze show listing" /></a></li>`)
+            $(`<li class="card flex column"><a href="${anchorURL ? anchorURL : "https://www.tvmaze.com/shows"}" target="_blank" rel="noopener noreferrer" ><img src="${imageSrc}" alt="TV maze show listing" /></a></li>`)
             .appendTo(".cards");
           }else{
             limit++;
@@ -44,7 +60,7 @@
         });
       },
       error: function(xhr, status, error){
-        $(".schedule-scroll").append("<p>We are unable to load Tomorrow's Schedule for you at this time.</p><p> Please try again later.</p>")
+        $(".schedule-scroll").append("<div style = \"display: grid;justify-content: center;\"><p>We are unable to load Tomorrow's Schedule for you at this time.</p><p> Please try again later.</p></div>")
       }
 
     });
