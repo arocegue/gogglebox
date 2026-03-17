@@ -30,8 +30,9 @@
           //Check if we have image and anchor URL otherwise skip to the next show
           let anchorURL = item?.show?.url;
           let imageSrc = item?.show?.image?.medium;
+          let imageAlt = item?.show?.name;
           if(imageSrc){
-            $(`<li class="card flex column"><a href="${anchorURL ? anchorURL : "https://www.tvmaze.com/shows"}" target="_blank" rel="noopener noreferrer" ><img src="${imageSrc}" alt="TV maze show listing" /></a></li>`)
+            $(`<li class="card flex column"><a href="${anchorURL ? anchorURL : "https://www.tvmaze.com/shows"}" target="_blank" rel="noopener noreferrer" ><img src="${imageSrc}" alt="${imageAlt ? imageAlt : "TV maze show listing"}" /></a></li>`)
             .appendTo(".cards");
           }else{
             limit++;

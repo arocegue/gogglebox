@@ -121,6 +121,8 @@
   nav {
     justify-content: space-between;
     align-items: center;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
   }
 
   .copyright-text {
@@ -138,19 +140,20 @@
 
   .main-show img, .stack-show img, .hero-banner img, .card img { 
     width: 100%;
+    height: auto;
     border-radius: 6px;
   }
 
-  @media screen and (max-width: 580px) {
-    .stack-show img {
-      margin-top: 1rem;
-    }
-  
+  .stack-show img {
+    margin-top: 1rem;
   }
 
   @media screen and (min-width: 580px) {
     body {
       font-size:16px;
+    }
+    .stack-show img {
+      margin-top: 0;
     }
     .cards {
       margin-bottom: 2rem;
@@ -165,18 +168,20 @@
     .now-playing {
       flex-direction: row;
       gap: 1rem;
+      justify-content: space-between;
     }
 
     .main-show {
       display: flex;
-      flex-basis: 33.33%;
+      /* flex-basis: 33.33%; */
     }
 
     .stack-show {
       display: flex;
-      flex-basis: 66.67%;
+      /* flex-basis: 66.67%; */
       flex-direction: column;
       gap: 1rem;
+      justify-content: space-between;
     }
     
   

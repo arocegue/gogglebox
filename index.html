@@ -3,13 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <script
-			  src="https://code.jquery.com/jquery-4.0.0.min.js"
-			  integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
-			  crossorigin="anonymous"></script>
   <link href = "css/style.css" rel="stylesheet" />
-  <link rel="preload" as="image" href="assets\images\2308_desktop_hero.jpg" media="(min-width: 581px)">
-  <link rel="preload" as="image" href="assets/images/2308_mobile_hero.jpg" media="(max-width: 580px)">
+  <link rel="preload" as="image" href="assets/images/2308_desktop_hero.jpg" media="(min-width: 580px)">
+  <link rel="preload" as="image" href="assets/images/2308_mobile_hero.jpg" media="(max-width: 579px)">
   <title>gogglebox</title>
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
@@ -37,7 +33,7 @@
   <main>
     <section class="hero-banner container">
       <picture class="hero-image">
-        <source srcset="assets\images\2308_desktop_hero.jpg" media="(min-width: 580px)" alt="Desktop Hero Image"/>
+        <source srcset="assets/images/2308_desktop_hero.jpg" media="(min-width: 580px)" alt="Desktop Hero Image"/>
         <img src="assets/images/2308_mobile_hero.jpg" alt="Mobile Hero Image">
       </picture>
     </section>
@@ -46,12 +42,12 @@
       <h2>Now Playing</h2>
       <div class="now-playing flex">
         <div class="main-show">
-          <img src="assets/images/2308_01_now_playing.jpg" alt="TV Maze Show">
+          <img src="assets/images/2308_01_now_playing.jpg" alt="TV Maze Show" width="580px" height="800px">
 
         </div>
         <div class="stack-show">
-          <img src="assets/images/2308_02_now_playing.jpg" alt="TV Maze Show">
-          <img src="assets/images/2308_03_now_playing.jpg" alt="TV Maze Show">
+          <img src="assets/images/2308_02_now_playing.jpg" alt="TV Maze Show" width="1010px" height="385px">
+          <img src="assets/images/2308_03_now_playing.jpg" alt="TV Maze Show" width="1010px" height="385px">
 
         </div>
       </div>
@@ -72,6 +68,10 @@
       <p>&copy; Gogglebox 2026 All Rights Reserved.</p>
     </div>
   </footer>
+  <script
+          src="https://code.jquery.com/jquery-4.0.0.min.js"
+          integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+          crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
-<script src="js/script.js"></script>
