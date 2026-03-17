@@ -15,7 +15,7 @@
     let countryCode = "US";
     let tomorrowDate = formatDate(new Date());
     let tvmazeAPI = `https://api.tvmaze.com/schedule`;
-
+    let htmlString = '';
     $.ajax({
       url: tvmazeAPI,
       data: {
@@ -32,8 +32,7 @@
           let imageSrc = item?.show?.image?.medium;
           let imageAlt = item?.show?.name;
           if(imageSrc){
-            $(`<li class="card flex column"><a href="${anchorURL ? anchorURL : "https://www.tvmaze.com/shows"}" target="_blank" rel="noopener noreferrer" ><img src="${imageSrc}" alt="${imageAlt ? imageAlt : "TV maze show listing"}" /></a></li>`)
-            .appendTo(".cards");
+            htmlString+=`<li class="card flex column"><a href="${anchorURL ? anchorURL : "https://www.tvmaze.com/shows"}" target="_blank" rel="noopener noreferrer" ><img src="${imageSrc}" alt="${imageAlt ? imageAlt : "TV maze show listing"}" /></a></li>`;
           }else{
             limit++;
           }
@@ -41,6 +40,7 @@
 
 
           if(index == limit){
+            $(".cards").html(htmlString);
             return false;
           }
         });
