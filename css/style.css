@@ -23,13 +23,18 @@
     height: 8px;
   }
 
+
+  .schedule-scroll::-webkit-scrollbar-thumb
+  , .schedule-scroll::-webkit-scrollbar-track {
+    border-radius: 6px;
+  }
+
   .schedule-scroll::-webkit-scrollbar-thumb {
     background: linear-gradient(
       to  right,
       #FF5C00,
       #CB2DF4
     ); 
-    border-radius: 6px;
   }
 
   .schedule-scroll::-webkit-scrollbar-track {
