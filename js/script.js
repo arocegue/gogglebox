@@ -4,16 +4,13 @@ const cardLimit = 24;
 function formatTomorrowDate () {
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
-    const year = tomorrow.getFullYear();
-    //Add one for tomorrow's day, and for month's zero index
-    const day = String(tomorrow.getDate() + 1).padStart(2, '0');
-    const month = String(tomorrow.getMonth() + 1).padStart(2, '0');
       
-    return `${year}-${month}-${day}`;
+    return tomorrow.toISOString().substring(0, 10);
 }
   
   
 $(function () {
+    console.log(formatTomorrowDate());
   $.ajax({
     url: tvmazeAPI,
     data: {
