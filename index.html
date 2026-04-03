@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" as="style" href="css/style.css">
   <link href = "css/style.css" rel="stylesheet" />
+  <link href= "jquery-ui-1.14.2/jquery-ui.min.css" rel="stylesheet" />
   <link rel="preload" as="image" href="assets/images/2308_desktop_hero.jpg" media="(min-width: 580px)">
   <link rel="preload" as="image" href="assets/images/2308_mobile_hero.jpg" media="(max-width: 579px)">
   <title>gogglebox</title>
@@ -19,14 +21,15 @@
       </div>
       <div class="login">
         <button id="login-button" type="button">Sign In</button>
-        <div id="login-form" class="hidden">
-          <label for="username">Username:</label>
-          <input id="username" type="text" style="width: 200px" />
-          <label for="password">Password:</label>
-          <input id="password" type="password" style="width: 200px" />
-          <br /><br />
-          <button type="button" id="cancel">Cancel</button>
-      </div>
+        <form id="login-form" hidden>
+          <fieldset style="border: none">
+            <label for="username">Username:</label>
+            <input id="username" type="text" style="width: 200px" />
+            <label for="password">Password:</label>
+            <input id="password" type="password" style="width: 200px" />
+          </fieldset>
+        </form>
+    </div>
     </nav>
   </header>
   
@@ -68,7 +71,8 @@
       <p>&copy; Gogglebox 2026 All Rights Reserved.</p>
     </div>
   </footer>
-  <script src="js/jquery-4.0.0.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/jquery-4.0.0.min.js" type="text/javascript"></script>
+  <script src="jquery-ui-1.14.2/jquery-ui.min.js" type="text/javascript"></script>
+  <script src="js/script.js" type="text/javascript"></script>
 </body>
 </html>

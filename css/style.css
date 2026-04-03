@@ -6,7 +6,31 @@
     font-size:12px;
     background-color: #2E083D
   }
+  .dialog-titlebar
+  , .dialog-buttonpane {
+    color: white !important;
+    background-color: #000 !important;
+    border: none !important;
+  }
 
+  .dialog-content {
+    color: white !important;
+  }
+  .dialog-buttonset{
+    float: none !important;
+  }
+  .dialog-buttonset .ui-button {
+    width:100% !important;
+  }
+  .dialog-buttonpane {
+    background-color: #2E083D !important;
+    padding: .5em !important;
+  }
+  .dialog {
+    background-color: #2E083D !important;
+    border: black 1px solid !important;
+    padding: 0 !important;
+  }
   .flex {
     display: flex;
   }
@@ -113,10 +137,6 @@
  
   .card:not(:last-child) {
     margin-right: 20px;
-  }
-
-  .hidden {
-    display: none;
   }
 
   .gogglebox-header{
